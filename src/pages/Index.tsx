@@ -105,11 +105,11 @@ const Index = () => {
                 <div className="text-3xl font-bold text-gradient">9.5 pH</div>
                 <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Alkaline refill</div>
               </div>
-              <div className="absolute right-0 top-1/2 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float" style={{ animationDelay: "-3s" }}>
+              <div className="absolute right-0 top-1/2 z-20 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float" style={{ animationDelay: "-3s" }}>
                 <div className="flex items-center gap-2 text-base font-semibold"><Snowflake className="h-5 w-5 text-azure" /> Ice daily</div>
                 <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Cubed & block</div>
               </div>
-              <div className="absolute bottom-8 left-8 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float" style={{ animationDelay: "-5s" }}>
+              <div className="absolute bottom-8 left-8 z-20 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float" style={{ animationDelay: "-5s" }}>
                 <div className="flex items-center gap-2 text-base font-semibold"><Award className="h-5 w-5 text-azure" /> LMNT</div>
                 <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Authorized dealer</div>
               </div>
