@@ -58,7 +58,7 @@ const Index = () => {
           src={heroBg}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute right-[-5%] top-1/2 z-0 w-[55%] max-w-[900px] -translate-y-1/2 select-none object-contain opacity-95"
+          className="pointer-events-none absolute right-[-10%] top-1/2 z-0 h-[130%] w-auto max-w-none -translate-y-1/2 select-none opacity-95"
         />
         {/* Soft left wash so headline & body copy stay legible */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-0 w-3/5 bg-gradient-to-r from-paper via-paper/80 to-transparent" aria-hidden />
