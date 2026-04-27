@@ -65,23 +65,17 @@ const Index = () => {
         />
         {/* Light gradient overlay — keeps left side legible, lets pink ink breathe on the right */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-paper via-paper/85 to-paper/10" aria-hidden />
-        {/* Soft top/bottom fade for polish */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-paper/40 via-transparent to-paper/60" aria-hidden />
-      </section>
-      <section className="-mt-[1px]" aria-hidden />
-      <section className="relative -mt-[1px] overflow-hidden">
-        {/* placeholder to keep structure */}
-      </section>
 
         <div className="container-x relative grid gap-12 pt-20 pb-28 md:pt-28 md:pb-36 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-7 animate-fade-up text-paper">
-            <span className="inline-flex items-center gap-2 rounded-full border border-paper/20 bg-paper/10 px-3.5 py-1.5 text-xs font-medium text-paper backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-aqua animate-pulse" /> Now refilling in Tucson, AZ
+          <div className="lg:col-span-7 animate-fade-up text-ink">
+            <span className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-paper/70 px-3.5 py-1.5 text-xs font-medium text-ink backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-azure animate-pulse" /> Now refilling in Tucson, AZ
             </span>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
               Hydration that <span className="text-gradient">moves</span> with your family.
             </h1>
-            <p className="mt-7 max-w-xl text-lg text-paper/80 md:text-xl">
+            <p className="mt-7 max-w-xl text-lg text-muted-foreground md:text-xl">
               Refill stations, reusable bottles, ice, dispensers and LMNT electrolytes —
               all under one roof. Built for healthier people and a healthier planet.
             </p>
@@ -91,37 +85,37 @@ const Index = () => {
                   Explore the Shop <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="xl" className="bg-paper/10 text-paper border border-paper/20 backdrop-blur hover:bg-paper/20">
+              <Button asChild variant="soft" size="xl">
                 <Link to="/learn">Why hydration matters</Link>
               </Button>
             </div>
 
-            <div className="mt-14 flex flex-wrap items-center gap-6 text-sm text-paper/70">
-              <span className="inline-flex items-center gap-2"><Award className="h-4 w-4 text-aqua" /> Authorized LMNT Dealer</span>
-              <span className="inline-flex items-center gap-2"><Leaf className="h-4 w-4 text-aqua" /> Sustainability-first</span>
-              <span className="inline-flex items-center gap-2"><Heart className="h-4 w-4 text-aqua" /> Family-owned</span>
+            <div className="mt-14 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+              <span className="inline-flex items-center gap-2"><Award className="h-4 w-4 text-azure" /> Authorized LMNT Dealer</span>
+              <span className="inline-flex items-center gap-2"><Leaf className="h-4 w-4 text-azure" /> Sustainability-first</span>
+              <span className="inline-flex items-center gap-2"><Heart className="h-4 w-4 text-azure" /> Family-owned</span>
             </div>
           </div>
 
           {/* Hero visual */}
           <div className="relative hidden lg:col-span-5 lg:block">
-            <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-aqua/30 via-azure/20 to-transparent blur-2xl" />
+            <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-aqua/20 via-azure/10 to-transparent blur-2xl" />
             <div className="relative mx-auto w-full max-w-md animate-float">
               <img
                 src={heroBottle}
                 alt="Chilled bottle of water with ice and mint"
                 width={1080}
                 height={1600}
-                className="w-full rounded-[2rem] shadow-[var(--shadow-glow)] ring-1 ring-paper/10"
+                className="w-full rounded-[2rem] shadow-[var(--shadow-pop)] ring-1 ring-ink/5"
               />
               {/* Floating glass cards */}
-              <div className="absolute -left-6 top-10 rounded-2xl border border-paper/20 bg-paper/10 px-4 py-3 text-paper backdrop-blur-md shadow-xl">
+              <div className="absolute -left-6 top-10 rounded-2xl border border-ink/10 bg-paper/80 px-4 py-3 text-ink backdrop-blur-md shadow-xl">
                 <div className="text-2xl font-bold text-gradient">9.5 pH</div>
-                <div className="text-[11px] uppercase tracking-wider text-paper/70">Alkaline refill</div>
+                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Alkaline refill</div>
               </div>
-              <div className="absolute -right-4 bottom-12 rounded-2xl border border-paper/20 bg-paper/10 px-4 py-3 text-paper backdrop-blur-md shadow-xl">
-                <div className="flex items-center gap-2 text-sm font-semibold"><Snowflake className="h-4 w-4 text-aqua" /> Ice daily</div>
-                <div className="text-[11px] uppercase tracking-wider text-paper/70">Cubed & block</div>
+              <div className="absolute -right-4 bottom-12 rounded-2xl border border-ink/10 bg-paper/80 px-4 py-3 text-ink backdrop-blur-md shadow-xl">
+                <div className="flex items-center gap-2 text-sm font-semibold"><Snowflake className="h-4 w-4 text-azure" /> Ice daily</div>
+                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Cubed & block</div>
               </div>
             </div>
           </div>
