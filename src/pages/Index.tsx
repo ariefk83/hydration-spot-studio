@@ -3,7 +3,7 @@ import { ArrowRight, Droplets, Leaf, Heart, Snowflake, Recycle, Zap, Users, Awar
 import { Button } from "@/components/ui/button";
 import PageShell from "@/components/site/PageShell";
 import SectionHeading from "@/components/site/SectionHeading";
-import heroBottle from "@/assets/hero-bottle-splash.jpg";
+import heroBottle from "@/assets/hero-bottle.png";
 import heroBg from "@/assets/hero-unsplash.jpg";
 import family from "@/assets/family-community.jpg";
 import storefront from "@/assets/storefront.jpg";
