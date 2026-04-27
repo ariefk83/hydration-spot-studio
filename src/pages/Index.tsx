@@ -93,10 +93,15 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Hero right column — let the pink ink background breathe; show only floating info cards */}
+          {/* Hero right column — bottle layered over the pink ink background */}
           <div className="relative hidden lg:col-span-5 lg:block">
             <div className="relative mx-auto h-full min-h-[480px] w-full max-w-md">
-              <div className="absolute left-2 top-16 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float">
+              <img
+                src={heroBottle}
+                alt="H2O Hydration Spot reusable aluminum bottle"
+                className="relative z-10 mx-auto h-[520px] w-auto object-contain drop-shadow-[0_30px_60px_rgba(15,23,42,0.25)] animate-float"
+              />
+              <div className="absolute left-2 top-16 z-20 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float">
                 <div className="text-3xl font-bold text-gradient">9.5 pH</div>
                 <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Alkaline refill</div>
               </div>
