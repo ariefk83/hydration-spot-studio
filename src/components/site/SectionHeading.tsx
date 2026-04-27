@@ -15,7 +15,7 @@ export const SectionHeading = ({ eyebrow, title, description, align = "left" }: 
         {eyebrow}
       </span>
     )}
-    <h2 className="mt-5 font-display text-4xl font-bold tracking-tight md:text-5xl">{title}</h2>
+    <h2 className="mt-5 font-display text-4xl font-bold tracking-tight md:text-4xl">{title}</h2>
     {description && <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{description}</p>}
   </div>
 );
