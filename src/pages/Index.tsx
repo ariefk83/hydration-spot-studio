@@ -3,7 +3,7 @@ import { ArrowRight, Droplets, Leaf, Heart, Snowflake, Recycle, Zap, Users, Awar
 import { Button } from "@/components/ui/button";
 import PageShell from "@/components/site/PageShell";
 import SectionHeading from "@/components/site/SectionHeading";
-import heroRibbon from "@/assets/hero-water-ribbon.jpg";
+import heroBottle from "@/assets/hero-bottle-splash.jpg";
 import family from "@/assets/family-community.jpg";
 import storefront from "@/assets/storefront.jpg";
 import electrolytes from "@/assets/electrolytes.jpg";
@@ -51,27 +51,33 @@ const Index = () => {
       description="Tucson's family-owned hydration storefront. Water refills, reusable bottles, dispensers, ice and LMNT electrolytes."
     >
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden ink-gradient">
+        {/* Animated color blobs */}
+        <div className="pointer-events-none absolute inset-0 -z-0" aria-hidden>
+          <div className="absolute -top-32 -left-24 h-[480px] w-[480px] rounded-full bg-aqua/40 blur-3xl animate-blob" />
+          <div className="absolute top-20 right-[-120px] h-[520px] w-[520px] rounded-full bg-azure/40 blur-3xl animate-blob" style={{ animationDelay: "-6s" }} />
+          <div className="absolute bottom-[-160px] left-1/3 h-[420px] w-[420px] rounded-full bg-mint/30 blur-3xl animate-blob" style={{ animationDelay: "-12s" }} />
+        </div>
+        {/* Subtle grid overlay */}
         <div
-          className="absolute inset-0 -z-10 opacity-90"
+          className="pointer-events-none absolute inset-0 -z-0 opacity-[0.07]"
           style={{
-            backgroundImage: `url(${heroRibbon})`,
-            backgroundSize: "cover",
-            backgroundPosition: "right center",
+            backgroundImage:
+              "linear-gradient(hsl(var(--paper)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--paper)) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
           }}
           aria-hidden
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-transparent" aria-hidden />
 
-        <div className="container-x relative pt-16 pb-24 md:pt-28 md:pb-36">
-          <div className="max-w-3xl animate-fade-up">
-            <span className="pill">
-              <span className="h-1.5 w-1.5 rounded-full bg-aqua" /> Now refilling in Tucson, AZ
+        <div className="container-x relative grid gap-12 pt-20 pb-28 md:pt-28 md:pb-36 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-7 animate-fade-up text-paper">
+            <span className="inline-flex items-center gap-2 rounded-full border border-paper/20 bg-paper/10 px-3.5 py-1.5 text-xs font-medium text-paper backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-aqua animate-pulse" /> Now refilling in Tucson, AZ
             </span>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
               Hydration that <span className="text-gradient">moves</span> with your family.
             </h1>
-            <p className="mt-7 max-w-xl text-lg text-muted-foreground md:text-xl">
+            <p className="mt-7 max-w-xl text-lg text-paper/80 md:text-xl">
               Refill stations, reusable bottles, ice, dispensers and LMNT electrolytes —
               all under one roof. Built for healthier people and a healthier planet.
             </p>
@@ -81,15 +87,38 @@ const Index = () => {
                   Explore the Shop <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="soft" size="xl">
+              <Button asChild size="xl" className="bg-paper/10 text-paper border border-paper/20 backdrop-blur hover:bg-paper/20">
                 <Link to="/learn">Why hydration matters</Link>
               </Button>
             </div>
 
-            <div className="mt-14 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-2"><Award className="h-4 w-4 text-azure" /> Authorized LMNT Dealer</span>
-              <span className="inline-flex items-center gap-2"><Leaf className="h-4 w-4 text-azure" /> Sustainability-first</span>
-              <span className="inline-flex items-center gap-2"><Heart className="h-4 w-4 text-azure" /> Family-owned</span>
+            <div className="mt-14 flex flex-wrap items-center gap-6 text-sm text-paper/70">
+              <span className="inline-flex items-center gap-2"><Award className="h-4 w-4 text-aqua" /> Authorized LMNT Dealer</span>
+              <span className="inline-flex items-center gap-2"><Leaf className="h-4 w-4 text-aqua" /> Sustainability-first</span>
+              <span className="inline-flex items-center gap-2"><Heart className="h-4 w-4 text-aqua" /> Family-owned</span>
+            </div>
+          </div>
+
+          {/* Hero visual */}
+          <div className="relative hidden lg:col-span-5 lg:block">
+            <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-aqua/30 via-azure/20 to-transparent blur-2xl" />
+            <div className="relative mx-auto w-full max-w-md animate-float">
+              <img
+                src={heroBottle}
+                alt="Chilled bottle of water with ice and mint"
+                width={1080}
+                height={1600}
+                className="w-full rounded-[2rem] shadow-[var(--shadow-glow)] ring-1 ring-paper/10"
+              />
+              {/* Floating glass cards */}
+              <div className="absolute -left-6 top-10 rounded-2xl border border-paper/20 bg-paper/10 px-4 py-3 text-paper backdrop-blur-md shadow-xl">
+                <div className="text-2xl font-bold text-gradient">9.5 pH</div>
+                <div className="text-[11px] uppercase tracking-wider text-paper/70">Alkaline refill</div>
+              </div>
+              <div className="absolute -right-4 bottom-12 rounded-2xl border border-paper/20 bg-paper/10 px-4 py-3 text-paper backdrop-blur-md shadow-xl">
+                <div className="flex items-center gap-2 text-sm font-semibold"><Snowflake className="h-4 w-4 text-aqua" /> Ice daily</div>
+                <div className="text-[11px] uppercase tracking-wider text-paper/70">Cubed & block</div>
+              </div>
             </div>
           </div>
         </div>
