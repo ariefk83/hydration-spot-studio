@@ -63,7 +63,7 @@ const Index = () => {
         {/* Soft left wash so headline & body copy stay legible */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-0 w-3/5 bg-gradient-to-r from-paper via-paper/80 to-transparent" aria-hidden />
 
-        <div className="container-x relative grid gap-12 pt-20 pb-28 md:pt-28 md:pb-36 lg:grid-cols-12 lg:gap-8">
+        <div className="container-x relative z-10 grid gap-12 pt-20 pb-28 md:pt-28 md:pb-36 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7 animate-fade-up text-ink">
             <span className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-paper/70 px-3.5 py-1.5 text-xs font-medium text-ink backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-azure animate-pulse" /> Now refilling in Tucson, AZ
