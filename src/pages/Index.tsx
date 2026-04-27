@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import PageShell from "@/components/site/PageShell";
 import SectionHeading from "@/components/site/SectionHeading";
 import heroBottle from "@/assets/hero-bottle-splash.jpg";
+import heroBg from "@/assets/hero-unsplash.jpg";
 import family from "@/assets/family-community.jpg";
 import storefront from "@/assets/storefront.jpg";
 import electrolytes from "@/assets/electrolytes.jpg";
@@ -52,22 +53,25 @@ const Index = () => {
     >
       {/* HERO */}
       <section className="relative overflow-hidden ink-gradient">
-        {/* Animated color blobs */}
-        <div className="pointer-events-none absolute inset-0 -z-0" aria-hidden>
-          <div className="absolute -top-32 -left-24 h-[480px] w-[480px] rounded-full bg-aqua/40 blur-3xl animate-blob" />
-          <div className="absolute top-20 right-[-120px] h-[520px] w-[520px] rounded-full bg-azure/40 blur-3xl animate-blob" style={{ animationDelay: "-6s" }} />
-          <div className="absolute bottom-[-160px] left-1/3 h-[420px] w-[420px] rounded-full bg-mint/30 blur-3xl animate-blob" style={{ animationDelay: "-12s" }} />
-        </div>
-        {/* Subtle grid overlay */}
+        {/* Unsplash background image */}
         <div
-          className="pointer-events-none absolute inset-0 -z-0 opacity-[0.07]"
+          className="pointer-events-none absolute inset-0 -z-10"
           style={{
-            backgroundImage:
-              "linear-gradient(hsl(var(--paper)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--paper)) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           aria-hidden
         />
+        {/* Dark gradient overlay for text legibility */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/60 to-ink/30" aria-hidden />
+
+        {/* Animated color blobs */}
+        <div className="pointer-events-none absolute inset-0 -z-0" aria-hidden>
+          <div className="absolute -top-32 -left-24 h-[480px] w-[480px] rounded-full bg-aqua/30 blur-3xl animate-blob" />
+          <div className="absolute top-20 right-[-120px] h-[520px] w-[520px] rounded-full bg-azure/30 blur-3xl animate-blob" style={{ animationDelay: "-6s" }} />
+          <div className="absolute bottom-[-160px] left-1/3 h-[420px] w-[420px] rounded-full bg-mint/20 blur-3xl animate-blob" style={{ animationDelay: "-12s" }} />
+        </div>
 
         <div className="container-x relative grid gap-12 pt-20 pb-28 md:pt-28 md:pb-36 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7 animate-fade-up text-paper">
