@@ -99,7 +99,7 @@ const Index = () => {
               <img
                 src={heroBottle}
                 alt="H2O Hydration Spot reusable aluminum bottle"
-                className="relative z-10 mx-auto h-[520px] w-auto object-contain drop-shadow-[0_30px_60px_rgba(15,23,42,0.25)] animate-float"
+                className="relative z-10 mx-auto h-[624px] w-auto object-contain drop-shadow-[0_30px_60px_rgba(15,23,42,0.25)] animate-float"
               />
               <div className="absolute left-2 top-16 z-20 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float">
                 <div className="text-3xl font-bold text-gradient">9.5 pH</div>
