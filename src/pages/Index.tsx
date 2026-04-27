@@ -52,21 +52,20 @@ const Index = () => {
       description="Tucson's family-owned hydration storefront. Water refills, reusable bottles, dispensers, ice and LMNT electrolytes."
     >
       {/* HERO */}
-      <section className="relative overflow-hidden bg-paper">
-        {/* Uploaded pink ink background image */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "hsl(40 20% 96%)" }}>
+        {/* Uploaded pink ink background image — sized to fill so the pink cluster is always visible */}
         <div
           className="pointer-events-none absolute inset-0 -z-10"
           style={{
             backgroundImage: `url(${heroBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundSize: "120% auto",
+            backgroundPosition: "center 30%",
+            backgroundRepeat: "no-repeat",
           }}
           aria-hidden
         />
-        {/* Very light wash so the pink ink stays vivid but text is still readable */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-paper/40" aria-hidden />
-        {/* Subtle left-side fade for headline contrast */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-paper/70 via-paper/20 to-transparent" aria-hidden />
+        {/* Soft left-side fade so the headline stays readable, pink stays vivid on the right */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-paper/85 via-paper/30 to-transparent" aria-hidden />
 
         <div className="container-x relative grid gap-12 pt-20 pb-28 md:pt-28 md:pb-36 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7 animate-fade-up text-ink">
