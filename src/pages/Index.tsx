@@ -97,25 +97,20 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Hero visual */}
+          {/* Hero right column — let the pink ink background breathe; show only floating info cards */}
           <div className="relative hidden lg:col-span-5 lg:block">
-            <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-aqua/20 via-azure/10 to-transparent blur-2xl" />
-            <div className="relative mx-auto w-full max-w-md animate-float">
-              <img
-                src={heroBottle}
-                alt="Chilled bottle of water with ice and mint"
-                width={1080}
-                height={1600}
-                className="w-full rounded-[2rem] shadow-[var(--shadow-pop)] ring-1 ring-ink/5"
-              />
-              {/* Floating glass cards */}
-              <div className="absolute -left-6 top-10 rounded-2xl border border-ink/10 bg-paper/80 px-4 py-3 text-ink backdrop-blur-md shadow-xl">
-                <div className="text-2xl font-bold text-gradient">9.5 pH</div>
-                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Alkaline refill</div>
+            <div className="relative mx-auto h-full min-h-[480px] w-full max-w-md">
+              <div className="absolute left-2 top-16 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float">
+                <div className="text-3xl font-bold text-gradient">9.5 pH</div>
+                <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Alkaline refill</div>
               </div>
-              <div className="absolute -right-4 bottom-12 rounded-2xl border border-ink/10 bg-paper/80 px-4 py-3 text-ink backdrop-blur-md shadow-xl">
-                <div className="flex items-center gap-2 text-sm font-semibold"><Snowflake className="h-4 w-4 text-azure" /> Ice daily</div>
-                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Cubed & block</div>
+              <div className="absolute right-0 top-1/2 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float" style={{ animationDelay: "-3s" }}>
+                <div className="flex items-center gap-2 text-base font-semibold"><Snowflake className="h-5 w-5 text-azure" /> Ice daily</div>
+                <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Cubed & block</div>
+              </div>
+              <div className="absolute bottom-8 left-8 rounded-2xl border border-ink/10 bg-paper/80 px-5 py-4 text-ink backdrop-blur-md shadow-xl animate-float" style={{ animationDelay: "-5s" }}>
+                <div className="flex items-center gap-2 text-base font-semibold"><Award className="h-5 w-5 text-azure" /> LMNT</div>
+                <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">Authorized dealer</div>
               </div>
             </div>
           </div>
